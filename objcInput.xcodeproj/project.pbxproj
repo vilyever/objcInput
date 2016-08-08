@@ -7,9 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE64089F1D5812ED00652BAC /* objcInput.h in Headers */ = {isa = PBXBuildFile; fileRef = FE64089E1D5812ED00652BAC /* objcInput.h */; };
+		FE64089F1D5812ED00652BAC /* objcInput.h in Headers */ = {isa = PBXBuildFile; fileRef = FE64089E1D5812ED00652BAC /* objcInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FE6408A61D5812ED00652BAC /* objcInput.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE64089B1D5812EC00652BAC /* objcInput.framework */; };
 		FE6408AB1D5812ED00652BAC /* objcInputTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6408AA1D5812ED00652BAC /* objcInputTests.m */; };
+		FE6408B81D58132D00652BAC /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = FE6408B51D58132D00652BAC /* Cartfile */; };
+		FE6408B91D58132D00652BAC /* objcInput.podspec in Resources */ = {isa = PBXBuildFile; fileRef = FE6408B61D58132D00652BAC /* objcInput.podspec */; };
+		FE6408BD1D5814D200652BAC /* objcWeakRef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6408BB1D5814D200652BAC /* objcWeakRef.framework */; };
+		FE6408BE1D5814D200652BAC /* objcWindow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6408BC1D5814D200652BAC /* objcWindow.framework */; };
+		FE6408C91D5814E400652BAC /* UIView+VDAutoPanUp.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6408BF1D5814E400652BAC /* UIView+VDAutoPanUp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6408CA1D5814E400652BAC /* UIView+VDAutoPanUp.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6408C01D5814E400652BAC /* UIView+VDAutoPanUp.m */; };
+		FE6408CB1D5814E400652BAC /* UIView+VDInputManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6408C11D5814E400652BAC /* UIView+VDInputManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6408CC1D5814E400652BAC /* UIView+VDInputManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6408C21D5814E400652BAC /* UIView+VDInputManager.m */; };
+		FE6408CD1D5814E400652BAC /* VDAutoPanUpElement.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6408C31D5814E400652BAC /* VDAutoPanUpElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6408CE1D5814E400652BAC /* VDAutoPanUpElement.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6408C41D5814E400652BAC /* VDAutoPanUpElement.m */; };
+		FE6408CF1D5814E400652BAC /* VDAutoPanUpManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6408C51D5814E400652BAC /* VDAutoPanUpManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6408D01D5814E400652BAC /* VDAutoPanUpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6408C61D5814E400652BAC /* VDAutoPanUpManager.m */; };
+		FE6408D11D5814E400652BAC /* VDInputManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FE6408C71D5814E400652BAC /* VDInputManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE6408D21D5814E400652BAC /* VDInputManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6408C81D5814E400652BAC /* VDInputManager.m */; };
+		FE6408D91D5815F600652BAC /* objcBlock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6408D31D5815F600652BAC /* objcBlock.framework */; };
+		FE6408DA1D5815F600652BAC /* objcHook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6408D41D5815F600652BAC /* objcHook.framework */; };
+		FE6408DB1D5815F600652BAC /* objcKeyPath.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6408D51D5815F600652BAC /* objcKeyPath.framework */; };
+		FE6408DC1D5815F600652BAC /* objcKVO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6408D61D5815F600652BAC /* objcKVO.framework */; };
+		FE6408DD1D5815F600652BAC /* objcObject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6408D71D5815F600652BAC /* objcObject.framework */; };
+		FE6408DE1D5815F600652BAC /* objcView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6408D81D5815F600652BAC /* objcView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +49,27 @@
 		FE6408A51D5812ED00652BAC /* objcInputTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = objcInputTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE6408AA1D5812ED00652BAC /* objcInputTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objcInputTests.m; sourceTree = "<group>"; };
 		FE6408AC1D5812ED00652BAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE6408B51D58132D00652BAC /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		FE6408B61D58132D00652BAC /* objcInput.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = objcInput.podspec; sourceTree = "<group>"; };
+		FE6408B71D58132D00652BAC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FE6408BB1D5814D200652BAC /* objcWeakRef.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = objcWeakRef.framework; path = Carthage/Build/iOS/objcWeakRef.framework; sourceTree = "<group>"; };
+		FE6408BC1D5814D200652BAC /* objcWindow.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = objcWindow.framework; path = Carthage/Build/iOS/objcWindow.framework; sourceTree = "<group>"; };
+		FE6408BF1D5814E400652BAC /* UIView+VDAutoPanUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VDAutoPanUp.h"; sourceTree = "<group>"; };
+		FE6408C01D5814E400652BAC /* UIView+VDAutoPanUp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VDAutoPanUp.m"; sourceTree = "<group>"; };
+		FE6408C11D5814E400652BAC /* UIView+VDInputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VDInputManager.h"; sourceTree = "<group>"; };
+		FE6408C21D5814E400652BAC /* UIView+VDInputManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VDInputManager.m"; sourceTree = "<group>"; };
+		FE6408C31D5814E400652BAC /* VDAutoPanUpElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDAutoPanUpElement.h; sourceTree = "<group>"; };
+		FE6408C41D5814E400652BAC /* VDAutoPanUpElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDAutoPanUpElement.m; sourceTree = "<group>"; };
+		FE6408C51D5814E400652BAC /* VDAutoPanUpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDAutoPanUpManager.h; sourceTree = "<group>"; };
+		FE6408C61D5814E400652BAC /* VDAutoPanUpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDAutoPanUpManager.m; sourceTree = "<group>"; };
+		FE6408C71D5814E400652BAC /* VDInputManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDInputManager.h; sourceTree = "<group>"; };
+		FE6408C81D5814E400652BAC /* VDInputManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VDInputManager.m; sourceTree = "<group>"; };
+		FE6408D31D5815F600652BAC /* objcBlock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = objcBlock.framework; path = Carthage/Build/iOS/objcBlock.framework; sourceTree = "<group>"; };
+		FE6408D41D5815F600652BAC /* objcHook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = objcHook.framework; path = Carthage/Build/iOS/objcHook.framework; sourceTree = "<group>"; };
+		FE6408D51D5815F600652BAC /* objcKeyPath.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = objcKeyPath.framework; path = Carthage/Build/iOS/objcKeyPath.framework; sourceTree = "<group>"; };
+		FE6408D61D5815F600652BAC /* objcKVO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = objcKVO.framework; path = Carthage/Build/iOS/objcKVO.framework; sourceTree = "<group>"; };
+		FE6408D71D5815F600652BAC /* objcObject.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = objcObject.framework; path = Carthage/Build/iOS/objcObject.framework; sourceTree = "<group>"; };
+		FE6408D81D5815F600652BAC /* objcView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = objcView.framework; path = Carthage/Build/iOS/objcView.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +77,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6408BD1D5814D200652BAC /* objcWeakRef.framework in Frameworks */,
+				FE6408D91D5815F600652BAC /* objcBlock.framework in Frameworks */,
+				FE6408DA1D5815F600652BAC /* objcHook.framework in Frameworks */,
+				FE6408DB1D5815F600652BAC /* objcKeyPath.framework in Frameworks */,
+				FE6408DC1D5815F600652BAC /* objcKVO.framework in Frameworks */,
+				FE6408DD1D5815F600652BAC /* objcObject.framework in Frameworks */,
+				FE6408DE1D5815F600652BAC /* objcView.framework in Frameworks */,
+				FE6408BE1D5814D200652BAC /* objcWindow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,9 +102,20 @@
 		FE6408911D5812EC00652BAC = {
 			isa = PBXGroup;
 			children = (
+				FE6408D31D5815F600652BAC /* objcBlock.framework */,
+				FE6408D41D5815F600652BAC /* objcHook.framework */,
+				FE6408D51D5815F600652BAC /* objcKeyPath.framework */,
+				FE6408D61D5815F600652BAC /* objcKVO.framework */,
+				FE6408D71D5815F600652BAC /* objcObject.framework */,
+				FE6408D81D5815F600652BAC /* objcView.framework */,
+				FE6408BB1D5814D200652BAC /* objcWeakRef.framework */,
+				FE6408BC1D5814D200652BAC /* objcWindow.framework */,
 				FE64089D1D5812ED00652BAC /* objcInput */,
 				FE6408A91D5812ED00652BAC /* objcInputTests */,
 				FE64089C1D5812EC00652BAC /* Products */,
+				FE6408B51D58132D00652BAC /* Cartfile */,
+				FE6408B61D58132D00652BAC /* objcInput.podspec */,
+				FE6408B71D58132D00652BAC /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +133,16 @@
 			children = (
 				FE64089E1D5812ED00652BAC /* objcInput.h */,
 				FE6408A01D5812ED00652BAC /* Info.plist */,
+				FE6408BF1D5814E400652BAC /* UIView+VDAutoPanUp.h */,
+				FE6408C01D5814E400652BAC /* UIView+VDAutoPanUp.m */,
+				FE6408C11D5814E400652BAC /* UIView+VDInputManager.h */,
+				FE6408C21D5814E400652BAC /* UIView+VDInputManager.m */,
+				FE6408C31D5814E400652BAC /* VDAutoPanUpElement.h */,
+				FE6408C41D5814E400652BAC /* VDAutoPanUpElement.m */,
+				FE6408C51D5814E400652BAC /* VDAutoPanUpManager.h */,
+				FE6408C61D5814E400652BAC /* VDAutoPanUpManager.m */,
+				FE6408C71D5814E400652BAC /* VDInputManager.h */,
+				FE6408C81D5814E400652BAC /* VDInputManager.m */,
 			);
 			path = objcInput;
 			sourceTree = "<group>";
@@ -94,6 +164,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE64089F1D5812ED00652BAC /* objcInput.h in Headers */,
+				FE6408CB1D5814E400652BAC /* UIView+VDInputManager.h in Headers */,
+				FE6408C91D5814E400652BAC /* UIView+VDAutoPanUp.h in Headers */,
+				FE6408CD1D5814E400652BAC /* VDAutoPanUpElement.h in Headers */,
+				FE6408CF1D5814E400652BAC /* VDAutoPanUpManager.h in Headers */,
+				FE6408D11D5814E400652BAC /* VDInputManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +253,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6408B91D58132D00652BAC /* objcInput.podspec in Resources */,
+				FE6408B81D58132D00652BAC /* Cartfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6408D21D5814E400652BAC /* VDInputManager.m in Sources */,
+				FE6408CE1D5814E400652BAC /* VDAutoPanUpElement.m in Sources */,
+				FE6408CA1D5814E400652BAC /* UIView+VDAutoPanUp.m in Sources */,
+				FE6408CC1D5814E400652BAC /* UIView+VDInputManager.m in Sources */,
+				FE6408D01D5814E400652BAC /* VDAutoPanUpManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +396,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = objcInput/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -330,6 +416,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = objcInput/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

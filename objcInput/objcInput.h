@@ -16,4 +16,8 @@ FOUNDATION_EXPORT const unsigned char objcInputVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <objcInput/PublicHeader.h>
 
-
+#import <objcInput/VDAutoPanUpElement.h>
+#import <objcInput/VDAutoPanUpManager.h>
+#import <objcInput/UIView+VDAutoPanUp.h>
+#import <objcInput/VDInputManager.h>
+#import <objcInput/UIView+VDInputManager.h>
