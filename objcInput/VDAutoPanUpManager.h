@@ -1,6 +1,6 @@
 //
 //  VDAutoPanUpManager.h
-//  objcTemp
+//  objcInput
 //
 //  Created by Deng on 16/7/8.
 //  Copyright © Deng. All rights reserved.
@@ -23,8 +23,10 @@ typedef NS_ENUM(NSInteger, VDAutoPanUpState) {
 
 @interface VDAutoPanUpManager : NSObject
 
-#pragma mark Public Method
+#pragma mark Constructor
 + (VDAutoPanUpManager *)sharedManager;
+
+#pragma mark Public Method
 + (void)triggerOn;
 + (void)triggerOnWithDefaultOffset:(CGFloat)offset;
 

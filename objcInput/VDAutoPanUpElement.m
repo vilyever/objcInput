@@ -1,13 +1,12 @@
 //
 //  VDAutoPanUpElement.m
-//  objcTemp
+//  objcInput
 //
 //  Created by Deng on 16/7/8.
 //  Copyright © Deng. All rights reserved.
 //
 
 #import "VDAutoPanUpElement.h"
-//#import "objcTemp.h"
 
 
 @interface VDAutoPanUpElement ()
@@ -18,15 +17,23 @@
 
 @implementation VDAutoPanUpElement
 
-#pragma mark Public Method
-+ (instancetype)elementWithTargetView:(UIView *)targetView withPanUpView:(UIView *)panUpView withOffset:(CGFloat)panUpOffset {
-    VDAutoPanUpElement *element = [[self alloc] init];
-    element.targetView = targetView;
-    element.panUpView = panUpView;
-    element.panUpOffset = panUpOffset;
-    
-    return element;
+#pragma mark Constructor
++ (instancetype)elementWithTargetView:(UIView *)targetView panUpView:(UIView *)panUpView panUpOffset:(CGFloat)panUpOffset {
+    return [[self alloc] initWithTargetView:targetView panUpView:panUpView panUpOffset:panUpOffset];
 }
+
+- (instancetype)initWithTargetView:(UIView *)targetView panUpView:(UIView *)panUpView panUpOffset:(CGFloat)panUpOffset {
+    self = [super init];
+    
+    _targetView = targetView;
+    _panUpView = panUpView;
+    _panUpOffset = panUpOffset;
+    
+    return self;
+}
+
+#pragma mark Public Method
+
 
 #pragma mark Properties
 

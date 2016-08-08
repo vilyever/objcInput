@@ -1,6 +1,6 @@
 //
 //  UIView+VDAutoPanUp.h
-//  objcTemp
+//  objcInput
 //
 //  Created by Deng on 16/7/8.
 //  Copyright © Deng. All rights reserved.
@@ -12,7 +12,7 @@
 
 @interface UIView (VDAutoPanUp)
 
-#pragma mark Public Method
+#pragma mark Properties
 @property (nonatomic, strong) VDAutoPanUpElement *vd_autoPanUpElement;
 
 @end

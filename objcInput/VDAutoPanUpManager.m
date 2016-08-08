@@ -1,6 +1,6 @@
 //
 //  VDAutoPanUpManager.m
-//  objcTemp
+//  objcInput
 //
 //  Created by Deng on 16/7/8.
 //  Copyright © Deng. All rights reserved.
@@ -13,6 +13,18 @@
 
 @interface VDAutoPanUpManager ()
 
+- (void)__i__onTextFieldDidBeginEditing:(NSNotification *)notification;
+- (void)__i__onTextFieldDidEndEditing:(NSNotification *)notification;
+- (void)__i__onTextViewDidBeginEditing:(NSNotification *)notification;
+- (void)__i__onTextViewDidEndEditing:(NSNotification *)notification;
+
+- (void)__i__onKeyboardWillShow:(NSNotification *)notification;
+- (void)__i__onKeyboardDidShow:(NSNotification *)notification;;
+- (void)__i__onKeyboardWillHide:(NSNotification *)notification;
+- (void)__i__onKeyboardDidHide:(NSNotification *)notification;
+- (void)__i__onKeyboardWillChangeFrame:(NSNotification *)notification;
+- (void)__i__onKeyboardDidChangeFrame:(NSNotification *)notification;
+
 @property (nonatomic, weak) UIView *currentResponder;
 
 @end
@@ -20,7 +32,7 @@
 
 @implementation VDAutoPanUpManager
 
-#pragma mark Public Method
+#pragma mark Constructor
 + (VDAutoPanUpManager *)sharedManager {
     static id _sharedInstance = nil;
     static dispatch_once_t onceToken;
@@ -31,6 +43,7 @@
     return _sharedInstance;
 }
 
+#pragma mark Public Method
 + (void)triggerOn {
     [self triggerOnWithDefaultOffset:0.0f];
 }
@@ -46,18 +59,18 @@
 - (instancetype)init {
     self = [super init];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalOnTextFieldDidBeginEditing:) name:UITextFieldTextDidBeginEditingNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalOnTextFieldDidEndEditing:) name:UITextFieldTextDidEndEditingNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(__i__onTextFieldDidBeginEditing:) name:UITextFieldTextDidBeginEditingNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(__i__onTextFieldDidEndEditing:) name:UITextFieldTextDidEndEditingNotification object:nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalOnTextViewDidBeginEditing:) name:UITextViewTextDidBeginEditingNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalOnTextFieldDidEndEditing:) name:UITextViewTextDidEndEditingNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(__i__onTextViewDidBeginEditing:) name:UITextViewTextDidBeginEditingNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(__i__onTextFieldDidEndEditing:) name:UITextViewTextDidEndEditingNotification object:nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalOnKeyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalOnKeyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalOnKeyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalOnKeyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalOnKeyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalOnKeyboardDidChangeFrame:) name:UIKeyboardDidChangeFrameNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(__i__onKeyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(__i__onKeyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(__i__onKeyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(__i__onKeyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(__i__onKeyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(__i__onKeyboardDidChangeFrame:) name:UIKeyboardDidChangeFrameNotification object:nil];
     
     return self;
 }
@@ -71,38 +84,38 @@
 
 
 #pragma mark Private Method
-- (void)internalOnTextFieldDidBeginEditing:(NSNotification *)notification {
+- (void)__i__onTextFieldDidBeginEditing:(NSNotification *)notification {
     self.currentResponder = notification.object;
 }
 
-- (void)internalOnTextFieldDidEndEditing:(NSNotification *)notification {
+- (void)__i__onTextFieldDidEndEditing:(NSNotification *)notification {
     self.currentResponder = nil;
 }
 
-- (void)internalOnTextViewDidBeginEditing:(NSNotification *)notification {
+- (void)__i__onTextViewDidBeginEditing:(NSNotification *)notification {
     self.currentResponder = notification.object;
 }
 
-- (void)internalOnTextViewDidEndEditing:(NSNotification *)notification {
+- (void)__i__onTextViewDidEndEditing:(NSNotification *)notification {
 //    self.currentResponder = nil;
 }
 
-- (void)internalOnKeyboardWillShow:(NSNotification *)notification {
+- (void)__i__onKeyboardWillShow:(NSNotification *)notification {
 
 }
 
-- (void)internalOnKeyboardDidShow:(NSNotification *)notification {
+- (void)__i__onKeyboardDidShow:(NSNotification *)notification {
     
 }
 
-- (void)internalOnKeyboardWillHide:(NSNotification *)notification {
+- (void)__i__onKeyboardWillHide:(NSNotification *)notification {
     
 }
 
-- (void)internalOnKeyboardDidHide:(NSNotification *)notification {
+- (void)__i__onKeyboardDidHide:(NSNotification *)notification {
 }
 
-- (void)internalOnKeyboardWillChangeFrame:(NSNotification *)notification {
+- (void)__i__onKeyboardWillChangeFrame:(NSNotification *)notification {
     if (!self.currentResponder) {
         return;
     }
@@ -176,7 +189,7 @@
     
 }
 
-- (void)internalOnKeyboardDidChangeFrame:(NSNotification *)notification {
+- (void)__i__onKeyboardDidChangeFrame:(NSNotification *)notification {
 }
 
 @end

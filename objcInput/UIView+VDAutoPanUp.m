@@ -1,6 +1,6 @@
 //
 //  UIView+VDAutoPanUp.m
-//  objcTemp
+//  objcInput
 //
 //  Created by Deng on 16/7/8.
 //  Copyright © Deng. All rights reserved.
@@ -9,7 +9,6 @@
 #import "UIView+VDAutoPanUp.h"
 
 #import <objc/runtime.h>
-//#import "objcTemp.h"
 
 
 @implementation UIView (VDAutoPanUp)

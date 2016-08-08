@@ -1,6 +1,6 @@
 //
 //  VDInputManager.h
-//  objcTemp
+//  objcInput
 //
 //  Created by Deng on 16/7/13.
 //  Copyright © Deng. All rights reserved.
@@ -43,7 +43,6 @@
 @property (nonatomic, assign) BOOL disableDone;
 
 #pragma mark Private Method
-- (void)internalInitVDInputManager;
 
 
 @end

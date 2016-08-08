@@ -1,6 +1,6 @@
 //
 //  VDInputManager.m
-//  objcTemp
+//  objcInput
 //
 //  Created by Deng on 16/7/13.
 //  Copyright © Deng. All rights reserved.
@@ -13,6 +13,14 @@
 
 @interface VDInputManager ()
 
+- (void)__i__initVDInputManager;
+- (void)__i__onTextFieldBeginEditing:(NSNotification *)notification;
+- (void)__i__onTextViewBeginEditing:(NSNotification *)notification;
+- (void)__i__onPrevButtonClick:(id)sender;
+- (void)__i__onNextButtonClick:(id)sender;
+- (void)__i__onClearButtonClick:(id)sender;
+- (void)__i__onDoneButtonClick:(id)sender;
+- (void)__i__findPrevNextInputView;
 
 @end
 
@@ -27,7 +35,7 @@
     
     [self.inputViews addObject:[inputView vd_weakRef]];
     
-    [self internalFindPrevNextInputView];
+    [self __i__findPrevNextInputView];
 }
 
 - (void)addInputView:(id)inputView atIndex:(NSUInteger)index {
@@ -37,7 +45,7 @@
 
     [self.inputViews insertObject:[inputView vd_weakRef] atIndex:index];
     
-    [self internalFindPrevNextInputView];
+    [self __i__findPrevNextInputView];
 }
 
 - (void)clearInputViews {
@@ -74,7 +82,7 @@
 
 - (UIBarButtonItem *)prevBarButtonItem {
     if (!_prevBarButtonItem) {
-        _prevBarButtonItem = [ [UIBarButtonItem alloc] initWithTitle:@"Prev" style:UIBarButtonItemStylePlain target:self action:@selector(internalOnPrevButtonClick:) ];
+        _prevBarButtonItem = [ [UIBarButtonItem alloc] initWithTitle:@"Prev" style:UIBarButtonItemStylePlain target:self action:@selector(__i__onPrevButtonClick:) ];
         _prevBarButtonItem.enabled = NO;
     }
     
@@ -83,7 +91,7 @@
 
 - (UIBarButtonItem *)nextBarButtonItem {
     if (!_nextBarButtonItem) {
-        _nextBarButtonItem = [ [UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(internalOnNextButtonClick:) ];
+        _nextBarButtonItem = [ [UIBarButtonItem alloc] initWithTitle:@"Next" style:UIBarButtonItemStylePlain target:self action:@selector(__i__onNextButtonClick:) ];
         _nextBarButtonItem.enabled = NO;
     }
     
@@ -92,7 +100,7 @@
 
 - (UIBarButtonItem *)clearBarButtonItem {
     if (!_clearBarButtonItem) {
-        _clearBarButtonItem = [ [UIBarButtonItem alloc] initWithTitle:@"Clear" style:UIBarButtonItemStylePlain target:self action:@selector(internalOnClearButtonClick:) ];
+        _clearBarButtonItem = [ [UIBarButtonItem alloc] initWithTitle:@"Clear" style:UIBarButtonItemStylePlain target:self action:@selector(__i__onClearButtonClick:) ];
     }
     
     return _clearBarButtonItem;
@@ -100,7 +108,7 @@
 
 - (UIBarButtonItem *)doneBarButtonItem {
     if (!_doneBarButtonItem) {
-        _doneBarButtonItem = [ [UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:@selector(internalOnDoneButtonClick:) ];
+        _doneBarButtonItem = [ [UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStylePlain target:self action:@selector(__i__onDoneButtonClick:) ];
     }
     
     return _doneBarButtonItem;
@@ -122,7 +130,7 @@
     self.disableClear = [_currentInputView vd_inputManagerDisableClear];
     self.disableDone = [_currentInputView vd_inputManagerDisableDone];
     
-    [self internalFindPrevNextInputView];
+    [self __i__findPrevNextInputView];
 }
 
 - (void)setPrevInputView:(id)prevInputView {
@@ -164,7 +172,7 @@
 - (instancetype)init {
     self = [super init];
     
-    [self internalInitVDInputManager];
+    [self __i__initVDInputManager];
     
     return self;
 }
@@ -178,38 +186,38 @@
 
 
 #pragma mark Private Method
-- (void)internalInitVDInputManager {
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalOnTextFieldBeginEditing:) name:UITextFieldTextDidBeginEditingNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(internalOnTextViewBeginEditing:) name:UITextViewTextDidBeginEditingNotification object:nil];
+- (void)__i__initVDInputManager {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(__i__onTextFieldBeginEditing:) name:UITextFieldTextDidBeginEditingNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(__i__onTextViewBeginEditing:) name:UITextViewTextDidBeginEditingNotification object:nil];
 }
 
-- (void)internalOnTextFieldBeginEditing:(NSNotification *)notification {
+- (void)__i__onTextFieldBeginEditing:(NSNotification *)notification {
     self.currentInputView = notification.object;
 }
 
-- (void)internalOnTextViewBeginEditing:(NSNotification *)notification {
+- (void)__i__onTextViewBeginEditing:(NSNotification *)notification {
     self.currentInputView = notification.object;
 }
 
-- (void)internalOnPrevButtonClick:(id)sender {
+- (void)__i__onPrevButtonClick:(id)sender {
     [self signUpFirstResponder:self.prevInputView];
 }
 
-- (void)internalOnNextButtonClick:(id)sender {
+- (void)__i__onNextButtonClick:(id)sender {
     [self signUpFirstResponder:self.nextInputView];
 }
 
-- (void)internalOnClearButtonClick:(id)sender {
+- (void)__i__onClearButtonClick:(id)sender {
     if ([self.currentInputView respondsToSelector:@selector(setText:)]) {
         [self.currentInputView setText:@""];
     }
 }
 
-- (void)internalOnDoneButtonClick:(id)sender {
+- (void)__i__onDoneButtonClick:(id)sender {
     [self resignCurrentInputView];
 }
 
-- (void)internalFindPrevNextInputView {
+- (void)__i__findPrevNextInputView {
     if (self.inputViews.count <= 1
         || !self.currentInputView) {
         self.prevInputView = nil;

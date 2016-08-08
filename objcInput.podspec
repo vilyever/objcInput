@@ -32,6 +32,8 @@ Pod::Spec.new do |s|
   s.public_header_files = 'objcInput/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
 
-#  s.dependency 'objcView'
+  s.dependency 'objcWindow'
+  s.dependency 'objcWeakRef'
+  s.dependency 'objcView'
 
 end

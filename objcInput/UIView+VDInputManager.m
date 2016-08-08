@@ -1,6 +1,6 @@
 //
 //  UIView+VDInputManager.m
-//  objcTemp
+//  objcInput
 //
 //  Created by Deng on 16/7/13.
 //  Copyright © Deng. All rights reserved.
@@ -9,8 +9,6 @@
 #import "UIView+VDInputManager.h"
 
 #import <objc/runtime.h>
-//#import "objcTemp.h"
-//@import objcTemp;
 
 
 @implementation UIView (VDInputManager)
